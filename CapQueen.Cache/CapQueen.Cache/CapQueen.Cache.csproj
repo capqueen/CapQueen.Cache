@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,8 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICacheHelper.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="V1\CacheHelperV1.cs" />
+    <Compile Include="V1\ICacheHelperV1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserManager.cs" />
+    <Compile Include="V2\CacheHelperV2.cs" />
+    <Compile Include="V2\ICacheHelperV2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="V3\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
