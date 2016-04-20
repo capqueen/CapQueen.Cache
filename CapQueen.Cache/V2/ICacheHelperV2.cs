@@ -18,7 +18,7 @@ using System.Text;
 namespace CapQueen.Cache
 {
     /// <summary>
-    /// 通用缓存接口
+    /// 缓存接口V2 更新Get 支持自动获取数据
     /// </summary>
     public interface ICacheHelperV2
     {
