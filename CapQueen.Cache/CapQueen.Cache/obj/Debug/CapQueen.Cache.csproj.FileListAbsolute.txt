@@ -1,0 +1,5 @@
+C:\Users\gondar\Source\Repos\CapQueen.Cache\CapQueen.Cache\CapQueen.Cache\bin\Debug\CapQueen.Cache.dll
+C:\Users\gondar\Source\Repos\CapQueen.Cache\CapQueen.Cache\CapQueen.Cache\bin\Debug\CapQueen.Cache.pdb
+C:\Users\gondar\Source\Repos\CapQueen.Cache\CapQueen.Cache\CapQueen.Cache\obj\Debug\CapQueen.Cache.csprojResolveAssemblyReference.cache
+C:\Users\gondar\Source\Repos\CapQueen.Cache\CapQueen.Cache\CapQueen.Cache\obj\Debug\CapQueen.Cache.dll
+C:\Users\gondar\Source\Repos\CapQueen.Cache\CapQueen.Cache\CapQueen.Cache\obj\Debug\CapQueen.Cache.pdb
