@@ -1,4 +1,4 @@
-﻿using CapQueen.Cache.Model;
+﻿
 /*
 * Copyright (c) 2015,CapQueen
 * All rights reserved.
@@ -15,6 +15,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
+using CapQueen.Cache.Model;
 
 namespace CapQueen.Cache.Repository
 {
