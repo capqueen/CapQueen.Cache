@@ -20,6 +20,7 @@ using CapQueen.Cache.V1;
 using CapQueen.Cache.Model;
 using CapQueen.Cache.Repository;
 using CapQueen.Cache.V2;
+using CapQueen.Cache.V3;
 
 namespace CapQueen.Cache
 {
@@ -29,6 +30,8 @@ namespace CapQueen.Cache
         private const string USER_CACHE_KEY = "urn:user:{0}";
         private UserRepository _repository = new UserRepository();
         private ICacheHelperV2 _cacheHelperV2 = new CacheHelperV2();
+        private ICacheHelperV3 _cacheHelperV3 = new CacheHelperV3();
+
 
         public User Get(int id)
         {
@@ -67,6 +70,14 @@ namespace CapQueen.Cache
 
             var key = string.Format(USER_CACHE_KEY, id);
             return _cacheHelperV2.Get<User>(key, () => _repository.Get(id));            
+        }
+
+        public User GetV4(int id)
+        {
+            if (id <= 0)
+                throw new ArgumentNullException("id");
+
+            return _cacheHelperV3.Get<User>(id, () => _repository.Get(id));
         }
     }
 }

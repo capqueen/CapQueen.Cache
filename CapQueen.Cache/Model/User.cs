@@ -1,4 +1,5 @@
-﻿/*
+﻿using CapQueen.Cache.Core;
+/*
 * Copyright (c) 2015,CapQueen
 * All rights reserved.
 * 
@@ -22,6 +23,7 @@ namespace CapQueen.Cache.Model
     /// </summary>
     public class User
     {
+        [PrimaryKey]
         public int UserId { get; set;}
 
         public string UserName { get; set; }

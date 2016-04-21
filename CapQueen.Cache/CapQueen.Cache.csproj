@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\PrimaryKey.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="V1\CacheHelperV1.cs" />
@@ -48,10 +49,10 @@
     <Compile Include="UserManager.cs" />
     <Compile Include="V2\CacheHelperV2.cs" />
     <Compile Include="V2\ICacheHelperV2.cs" />
+    <Compile Include="V3\CacheHelperV3.cs" />
+    <Compile Include="V3\ICacheHelperV3.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="V3\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
