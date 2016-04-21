@@ -1,5 +1,5 @@
 ﻿/*
-* Copyright (c) 2015,上海汇航捷讯网络科技有限公司
+* Copyright (c) 2015,CapQueen
 * All rights reserved.
 * 
 * 摘    要：
