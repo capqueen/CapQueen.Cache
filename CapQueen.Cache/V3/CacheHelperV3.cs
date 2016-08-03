@@ -70,7 +70,6 @@ namespace CapQueen.Cache.V3
         /// <returns></returns>
         public void Set<T>(T obj)
         {
-
             //此处应该被缓存
             var type = typeof(T);
             var primaryKey = type.GetProperties()

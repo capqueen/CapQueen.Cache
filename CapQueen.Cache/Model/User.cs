@@ -30,4 +30,22 @@ namespace CapQueen.Cache.Model
 
         public string Cellphone { get; set; }
     }
+
+    public class UserCacheEntity
+    {
+        [PrimaryKey]
+        public int ID
+        {
+            get
+            {
+                return string.Format("{0}:{1}", UserId, UserName);
+            }
+        }
+
+        public int UserId { get; set; }
+
+        public string UserName { get; set; }
+
+        public string Cellphone { get; set; }
+    }
 }
