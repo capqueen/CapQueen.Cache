@@ -22,6 +22,10 @@ namespace CapQueen.Cache.V3
     public class CacheHelperV3 : ICacheHelperV3
     {
         protected static volatile ObjectCache Cache = MemoryCache.Default;
+
+        private static object LockObj = new object();
+           
+
         public void Set<T>(string key, T obj)
         {
             throw new NotImplementedException();
@@ -37,20 +41,34 @@ namespace CapQueen.Cache.V3
 
         public T Get<T>(string key, Func<T> fetch = null)
         {
+            var result = GetFromCache(key);
+
+            if (result == null)
+            {
+                lock (LockObj)
+                {
+                    result = GetFromCache(key);
+                    if(result == null)
+                    {
+                        result = fetch();
+
+                        if (result != null)
+                            Set(key, result);
+                    }
+                }                
+            }
+
+            return result;
+        }
+
+        private T GetFromCache<T>(string key)
+        {
             T result = default(T);
 
             var obj = Cache.Get(key);
             if (obj is T)
             {
                 result = (T)obj;
-            }
-
-            if (result == null)
-            {
-                result = fetch();
-
-                if (result != null)
-                    Set(key, result);
             }
 
             return result;
