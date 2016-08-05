@@ -45,7 +45,7 @@ namespace CapQueen.Cache.V3
 
             if (result == null)
             {
-                lock (LockObj)
+                lock (LockObj) //这里的锁 只是处于减少db访问压力的目的，分布式情况下依然有效 并发数最大 = 服务器数 这点压力对于DB不是问题
                 {
                     result = GetFromCache(key);
                     if(result == null)
